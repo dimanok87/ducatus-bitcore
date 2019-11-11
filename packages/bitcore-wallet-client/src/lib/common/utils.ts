@@ -4,6 +4,7 @@ import {
   BitcoreLib,
   BitcoreLibCash,
   Deriver,
+  DucatuscoreLib,
   Transactions
 } from 'crypto-wallet-core';
 
@@ -19,6 +20,7 @@ var Bitcore = BitcoreLib;
 var Bitcore_ = {
   btc: Bitcore,
   bch: BitcoreLibCash,
+  duc: DucatuscoreLib,
   eth: Bitcore
 };
 var PrivateKey = Bitcore.PrivateKey;

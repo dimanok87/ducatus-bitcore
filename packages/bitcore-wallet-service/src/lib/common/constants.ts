@@ -4,6 +4,7 @@ module.exports = {
   COINS: {
     BTC: 'btc',
     BCH: 'bch',
+    DUC: 'duc',
     ETH: 'eth',
     USDC: 'usdc',
     PAX: 'pax',
@@ -18,7 +19,8 @@ module.exports = {
 
   UTXO_COINS: {
     BTC: 'btc',
-    BCH: 'bch'
+    BCH: 'bch',
+    DUC: 'duc'
   },
 
   NETWORKS: {
@@ -26,7 +28,7 @@ module.exports = {
     TESTNET: 'testnet'
   },
 
-  ADDRESS_FORMATS: ['copay', 'cashaddr', 'legacy'],
+  ADDRESS_FORMATS: ['copay', 'cashaddr', 'legacy', 'ducatus'],
 
   SCRIPT_TYPES: {
     P2SH: 'P2SH',

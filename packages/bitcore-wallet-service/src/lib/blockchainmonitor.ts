@@ -50,6 +50,7 @@ export class BlockchainMonitor {
           this.explorers = {
             btc: {},
             bch: {},
+            duc: {},
             eth: {}
           };
 

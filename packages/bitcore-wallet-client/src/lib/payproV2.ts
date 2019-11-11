@@ -17,6 +17,7 @@ var Bitcore_ = {
 var MAX_FEE_PER_KB = {
   btc: 10000 * 1000, // 10k sat/b
   bch: 10000 * 1000, // 10k sat/b
+  duc: 10000 * 1000, // 10k sat/b
   eth: 50000000000 // 50 Gwei
 };
 

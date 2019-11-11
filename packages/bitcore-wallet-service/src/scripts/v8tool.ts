@@ -20,7 +20,7 @@ const authKeyObj =  Bitcore.PrivateKey(authKey);
 let tmp  = authKeyObj.toObject();
 tmp.compressed = false;
 const pubKey = Bitcore.PrivateKey(tmp).toPublicKey() ;
-const baseUrl = `https://api.bitcore.io/api/${coin}/${network}`;
+const baseUrl = `http://localhost:3000/api/${coin}/${network}`;
 let client = new Client({
   baseUrl,
   authKey: authKeyObj,

@@ -52,5 +52,8 @@
     "typedoc": "^0.15.0",
     "typescript-eslint-parser": "^15.0.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "ducatuscore-lib": "git://github.com/DUCATUS-revival/ducatuscore-lib.git",
+    "litecore-p2p": "^1.1.2"
+  }
 }

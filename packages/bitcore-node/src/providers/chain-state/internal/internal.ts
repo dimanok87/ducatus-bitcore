@@ -593,7 +593,7 @@ export class InternalStateProvider implements CSP.IChainStateService {
   }
 
   private extractAddress(address: string): string {
-    const extractedAddress = address.replace(/^(bitcoincash:|bchtest:|bitcoin:)/i, '').replace(/\?.*/, '');
+    const extractedAddress = address.replace(/^(bitcoincash:|bchtest:|bitcoin:|ducatus:)/i, '').replace(/\?.*/, '');
     return extractedAddress || address;
   }
 }

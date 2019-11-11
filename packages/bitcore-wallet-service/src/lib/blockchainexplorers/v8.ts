@@ -14,6 +14,7 @@ const Bitcore = require('bitcore-lib');
 const Bitcore_ = {
   btc: Bitcore,
   bch: require('bitcore-lib-cash'),
+  duc: require('ducatuscore-lib'),
   eth: Bitcore
 };
 const config = require('../../config');

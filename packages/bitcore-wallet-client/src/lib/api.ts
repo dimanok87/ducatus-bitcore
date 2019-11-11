@@ -20,6 +20,7 @@ var Bitcore = CWC.BitcoreLib;
 var Bitcore_ = {
   btc: CWC.BitcoreLib,
   bch: CWC.BitcoreLibCash,
+  duc: CWC.DucatuscoreLib,
   eth: CWC.BitcoreLib
 };
 var Mnemonic = require('bitcore-mnemonic');
@@ -65,6 +66,7 @@ export class API extends EventEmitter {
   // Expose bitcore
   static Bitcore = CWC.BitcoreLib;
   static BitcoreCash = CWC.BitcoreLibCash;
+  static Ducatuscore = CWC.DucatuscoreLib;
 
   constructor(opts?) {
     super();
@@ -350,11 +352,13 @@ export class API extends EventEmitter {
   // */
   fromString(credentials) {
     try {
+      console.log(_);
       if (!_.isObject(credentials) || !(credentials as any).xPubKey) {
         credentials = Credentials.fromObj(JSON.parse(credentials));
       }
       this.credentials = credentials;
     } catch (ex) {
+      console.log(ex); 
       log.warn(`Error importing wallet: ${ex}`);
       if (ex.toString().match(/Obsolete/)) {
         throw new Errors.OBSOLETE_BACKUP();
@@ -2444,10 +2448,12 @@ export class API extends EventEmitter {
         // coin, network,  multisig
         ['btc', 'livenet'],
         ['bch', 'livenet'],
+        ['duc', 'livenet'],
         ['eth', 'livenet'],
         ['eth', 'testnet'],
         ['btc', 'livenet', true],
-        ['bch', 'livenet', true]
+        ['bch', 'livenet', true],
+        ['duc', 'livenet', true]
       ];
       if (key.use44forMultisig) {
         //  testing old multi sig
