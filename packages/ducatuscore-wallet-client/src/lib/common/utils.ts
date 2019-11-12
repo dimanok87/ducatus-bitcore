@@ -6,7 +6,7 @@ import {
   Deriver,
   DucatuscoreLib,
   Transactions
-} from 'crypto-wallet-core';
+} from '../../../../crypto-ducatus-wallet-core';
 
 import * as _ from 'lodash';
 import { Constants } from './constants';

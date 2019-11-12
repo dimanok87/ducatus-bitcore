@@ -2,7 +2,7 @@ import * as Bcrypt from 'bcryptjs';
 import { Encryption } from './encryption';
 import { Client } from './client';
 import { Storage } from './storage';
-import { Transactions, Deriver } from 'crypto-wallet-core';
+import { Transactions, Deriver } from '../../crypto-ducatus-wallet-core';
 const { PrivateKey } = require('bitcore-lib');
 const Mnemonic = require('bitcore-mnemonic');
 const { ParseApiStream } = require('./stream-util');

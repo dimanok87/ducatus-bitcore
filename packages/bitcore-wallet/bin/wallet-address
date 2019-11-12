@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 var program = require('commander');
-var bitcoreCash = require('bitcore-wallet-client').BitcoreCash;
+var bitcoreCash = require('../../ducatuscore-wallet-client').BitcoreCash;
 var utils = require('./cli-utils');
 program = utils.configureCommander(program);
 

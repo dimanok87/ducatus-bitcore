@@ -1,4 +1,4 @@
-import { Transactions } from 'crypto-wallet-core';
+import { Transactions } from '../../../../../crypto-ducatus-wallet-core';
 import _ from 'lodash';
 import { IAddress } from 'src/lib/model/address';
 import { IChain } from '..';

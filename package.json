@@ -24,10 +24,14 @@
     "ci:bitcore-node": "./ci.sh 'npm run test:bitcore-node'",
     "test:bitcore-lib": "cd ./packages/bitcore-lib && npm run test",
     "ci:bitcore-lib": "./ci.sh 'npm run test:bitcore-lib'",
+    "test:ducatuscore-lib": "cd ./packages/bitcore-lib && npm run test",
+    "ci:ducatuscore-lib": "./ci.sh 'npm run test:bitcore-lib'",
     "test:bitcore-lib-cash": "cd ./packages/bitcore-lib-cash && npm run test",
     "ci:bitcore-lib-cash": "./ci.sh 'npm run test:bitcore-lib-cash'",
     "test:bitcore-p2p": "cd ./packages/bitcore-p2p && npm run test",
     "ci:bitcore-p2p": "./ci.sh 'npm run test:bitcore-p2p'",
+    "test:ducatuscore-p2p": "cd ./packages/bitcore-p2p && npm run test",
+    "ci:ducatuscore-p2p": "./ci.sh 'npm run test:bitcore-p2p'",
     "test:bitcore-p2p-cash": "cd ./packages/bitcore-p2p-cash && npm run test",
     "ci:bitcore-p2p-cash": "./ci.sh 'npm run test:bitcore-p2p-cash'",
     "test:bitcore-mnemonic": "cd ./packages/bitcore-mnemonic && npm run test",
@@ -51,9 +55,5 @@
     "prettier": "^1.14.3",
     "typedoc": "^0.15.0",
     "typescript-eslint-parser": "^15.0.0"
-  },
-  "dependencies": {
-    "ducatuscore-lib": "git://github.com/DUCATUS-revival/ducatuscore-lib.git",
-    "litecore-p2p": "^1.1.2"
   }
 }
