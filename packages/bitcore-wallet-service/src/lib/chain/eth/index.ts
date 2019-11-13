@@ -1,7 +1,7 @@
 import _ from 'lodash';
 import { IAddress } from 'src/lib/model/address';
 import { IChain } from '..';
-import { Transactions } from '../../../../../crypto-ducatus-wallet-core';
+import { Transactions } from 'crypto-ducatus-wallet-core';
 
 const Common = require('../../common');
 const Constants = Common.Constants;
