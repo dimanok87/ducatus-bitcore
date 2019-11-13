@@ -2,7 +2,7 @@
 
 var _ = require('lodash');
 var program = require('commander');
-var bitcoreCash = require('../../ducatuscore-wallet-client').BitcoreCash;
+var bitcoreCash = require('../../ducatus-wallet-client').BitcoreCash;
 var utils = require('./cli-utils');
 program = utils.configureCommander(program);
 

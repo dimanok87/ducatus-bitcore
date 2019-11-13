@@ -2,7 +2,7 @@ var _ = require('lodash');
 var url = require('url');
 var read = require('read')
 var log = require('npmlog');
-var Client = require('../../ducatuscore-wallet-client');
+var Client = require('../../ducatus-wallet-client');
 var FileStorage = require('./filestorage');
 var sjcl = require('sjcl');
 
