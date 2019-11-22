@@ -27,42 +27,42 @@ module.exports = {
   messageBrokerOpts: {
     //  To use message broker server, uncomment this:
     messageBrokerServer: {
-      url: 'http://localhost:3380',
+      url: 'http://127.0.0.1:3380',
     },
   },
   blockchainExplorerOpts: {
     duc: {
       livenet: {
-        url: 'http://localhost:3000',
+        url: 'http://127.0.0.1:3000',
       },
       testnet: {
-        url: 'http://localhost:3000',
+        url: 'http://127.0.0.1:3000',
         regtestEnabled: false
       },
     },
     btc: {
       livenet: {
-        url: 'http://localhost:3000',
+        url: 'http://127.0.0.1:3000',
       },
       testnet: {
-        url: 'http://localhost:3000',
+        url: 'http://127.0.0.1:3000',
         regtestEnabled: false
       },
     },
     bch: {
       livenet: {
-        url: 'http://localhost:3000',
+        url: 'http://127.0.0.1:3000',
       },
       testnet: {
-        url: 'http://localhost:3000',
+        url: 'http://127.0.0.1:3000',
       },
     },
     eth: {
       livenet: {
-        url: 'http://localhost:3000',
+        url: 'http://127.0.0.1:3000',
       },
       testnet: {
-        url: 'http://localhost:3000',
+        url: 'http://127.0.0.1:3000',
       },
     },
   },
