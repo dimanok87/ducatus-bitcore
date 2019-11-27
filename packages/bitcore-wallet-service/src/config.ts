@@ -42,27 +42,27 @@ module.exports = {
     },
     btc: {
       livenet: {
-        url: 'http://127.0.0.1:3000',
+        url: 'https://api.bitcore.io',
       },
       testnet: {
-        url: 'http://127.0.0.1:3000',
+        url: 'https://api.bitcore.io',
         regtestEnabled: false
       },
     },
     bch: {
       livenet: {
-        url: 'http://127.0.0.1:3000',
+        url: 'https://api.bitcore.io',
       },
       testnet: {
-        url: 'http://127.0.0.1:3000',
+        url: 'https://api.bitcore.io',
       },
     },
     eth: {
       livenet: {
-        url: 'http://127.0.0.1:3000',
+        url: 'https://api-eth.bitcore.io',
       },
       testnet: {
-        url: 'http://127.0.0.1:3000',
+        url: 'https://api-eth.bitcore.io',
       },
     },
   },

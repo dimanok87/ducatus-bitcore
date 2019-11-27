@@ -284,14 +284,14 @@ export class Key {
       coinCode = '1';
     } else if (opts.coin == 'bch') {
       if (this.use0forBCH) {
-        coinCode = '0';
+        coinCode = '1025';
       } else {
         coinCode = '145';
       }
     } else if (opts.coin == 'btc') {
-      coinCode = '0';
-    } else if (opts.coin == 'duc') {
       coinCode = '1025';
+    } else if (opts.coin == 'duc') {
+      coinCode = '0';
     } else if (opts.coin == 'eth') {
       coinCode = '60';
     } else {
