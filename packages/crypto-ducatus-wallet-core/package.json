@@ -22,8 +22,8 @@
   "author": "Micah Riggan",
   "license": "MIT",
   "dependencies": {
-    "bitcore-lib": "^8.10.0",
-    "bitcore-lib-cash": "^8.10.0",
+    "bitcore-lib": "8.10.0",
+    "bitcore-lib-cash": "8.10.0",
     "ducatuscore-lib": "^8.9.4",
     "ethers": "4.0.37",
     "ripple-keypairs": "0.11.0",
