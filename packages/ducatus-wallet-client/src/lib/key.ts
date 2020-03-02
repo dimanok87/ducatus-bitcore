@@ -280,7 +280,7 @@ export class Key {
     let purpose = opts.n == 1 || this.use44forMultisig ? '44' : '48';
     var coinCode = '0';
 
-    if (opts.network == 'testnet' && opts.coin !== 'eth') {
+    if (opts.network == 'testnet' && opts.coin !== 'eth' && opts.coin !== 'ducx') {
       coinCode = '1';
     } else if (opts.coin == 'bch') {
       if (this.use0forBCH) {
@@ -293,7 +293,7 @@ export class Key {
     } else if (opts.coin == 'duc') {
       coinCode = '0';
     } else if (opts.coin == 'eth') {
-      coinCode = '60';
+      coinCode = '1060';
     } else {
       throw new Error('unknown coin: ' + opts.coin);
     }
