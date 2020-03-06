@@ -125,6 +125,11 @@ export class Utils {
         toSatoshis: 1e18,
         maxDecimals: 6,
         minDecimals: 2
+      },
+      ducx: {
+        toSatoshis: 1e18,
+        maxDecimals: 6,
+        minDecimals: 2
       }
     };
 

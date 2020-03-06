@@ -1,6 +1,7 @@
 import { BchValidation } from './bch';
 import { BtcValidation } from './btc';
 import { DucValidation } from './duc';
+import { DucXValidation } from './ducx';
 import { EthValidation } from './eth';
 
 export interface IValidation {
@@ -12,7 +13,8 @@ const validation: { [chain: string]: IValidation } = {
   BTC: new BtcValidation(),
   BCH: new BchValidation(),
   DUC: new DucValidation(),
-  ETH: new EthValidation()
+  ETH: new EthValidation(),
+  DUCX: new DucXValidation()
 };
 
 export class ValidationProxy {
