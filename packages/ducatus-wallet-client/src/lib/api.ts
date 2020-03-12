@@ -1,9 +1,9 @@
 'use strict';
 
-import * as CWC from '../../../crypto-ducatus-wallet-core';
 import { EventEmitter } from 'events';
 import _ from 'lodash';
 import sjcl from 'sjcl';
+import * as CWC from '../../../crypto-ducatus-wallet-core';
 import { Constants, Utils } from './common';
 import { Credentials } from './credentials';
 import { Key } from './key';
@@ -21,7 +21,8 @@ var Bitcore_ = {
   btc: CWC.BitcoreLib,
   bch: CWC.BitcoreLibCash,
   duc: CWC.DucatuscoreLib,
-  eth: CWC.BitcoreLib
+  eth: CWC.BitcoreLib,
+  ducx: CWC.BitcoreLib,
 };
 var Mnemonic = require('bitcore-mnemonic');
 var url = require('url');
@@ -30,7 +31,7 @@ var querystring = require('querystring');
 var log = require('./log');
 const Errors = require('./errors');
 
-var BASE_URL = 'http://ducwall.rocknblock.io:3232/bws/api';
+var BASE_URL = 'http://127.0.0.1:3232/bws/api';
 
 // /**
 // * @desc ClientAPI constructor.
@@ -352,13 +353,12 @@ export class API extends EventEmitter {
   // */
   fromString(credentials) {
     try {
-      console.log(_);
       if (!_.isObject(credentials) || !(credentials as any).xPubKey) {
         credentials = Credentials.fromObj(JSON.parse(credentials));
       }
       this.credentials = credentials;
     } catch (ex) {
-      console.log(ex); 
+
       log.warn(`Error importing wallet: ${ex}`);
       if (ex.toString().match(/Obsolete/)) {
         throw new Errors.OBSOLETE_BACKUP();
@@ -426,7 +426,7 @@ export class API extends EventEmitter {
     if (!_.includes(Constants.COINS, coin))
       return cb(new Error('Invalid coin'));
 
-    if (coin == 'eth')
+    if ((coin == 'eth') || (coin == 'ducx'))
       return cb(new Error('ETH not supported for this action'));
 
     var B = Bitcore_[coin];
@@ -650,6 +650,7 @@ export class API extends EventEmitter {
     const chain = Utils.getChain(txp.coin);
     switch (chain) {
       case 'ETH':
+      case 'DUCX':
         const unsignedTxs = t.uncheckedSerialize();
         const signedTxs = [];
         for (let index = 0; index < signatures.length; index++) {
@@ -2449,6 +2450,7 @@ export class API extends EventEmitter {
         ['btc', 'livenet'],
         ['bch', 'livenet'],
         ['duc', 'livenet'],
+        ['ducx', 'livenet'],
         ['eth', 'livenet'],
         ['eth', 'testnet'],
         ['btc', 'livenet', true],

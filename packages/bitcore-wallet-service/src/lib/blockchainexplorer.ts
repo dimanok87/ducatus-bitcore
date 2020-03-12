@@ -25,6 +25,10 @@ const PROVIDERS = {
     eth: {
       livenet: 'https://api-eth.bitcore.io',
       testnet: 'https://api-eth.bitcore.io'
+    },
+    ducx: {
+      livenet: 'http://127.0.0.1:3000',
+      testnet: 'http://127.0.0.1:3000'
     }
   }
 };

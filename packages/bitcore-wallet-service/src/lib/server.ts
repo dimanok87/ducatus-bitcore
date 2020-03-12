@@ -30,7 +30,8 @@ const Bitcore_ = {
   btc: Bitcore,
   bch: require('bitcore-lib-cash'),
   duc: require('ducatuscore-lib'),
-  eth: Bitcore
+  eth: Bitcore,
+  ducx: Bitcore,
 };
 
 const Common = require('./common');
@@ -534,7 +535,7 @@ export class WalletService {
       return cb(new ClientError('Invalid public key'));
     }
 
-    if (opts.coin === 'eth' && opts.n > 1) {
+    if (((opts.coin === 'eth') || (opts.coin === 'ducx')) && opts.n > 1) {
       return cb(
         new ClientError( 'Multisig ETH wallet not supported')
       );

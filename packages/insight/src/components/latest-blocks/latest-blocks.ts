@@ -70,7 +70,7 @@ export class LatestBlocksComponent implements OnInit, OnDestroy {
               ) {
                 return this.blocksProvider.toUtxoCoinAppBlock(block);
               }
-              if (this.chainNetwork.chain === 'ETH') {
+              if (this.chainNetwork.chain === 'ETH' || this.chainNetwork.chain === 'DUCX') {
                 return this.blocksProvider.toEthAppBlock(block);
               }
             }
@@ -104,7 +104,7 @@ export class LatestBlocksComponent implements OnInit, OnDestroy {
               ) {
                 return this.blocksProvider.toUtxoCoinAppBlock(block);
               }
-              if (this.chainNetwork.chain === 'ETH') {
+              if (this.chainNetwork.chain === 'ETH' || this.chainNetwork.chain === 'DUCX') {
                 return this.blocksProvider.toEthAppBlock(block);
               }
             }

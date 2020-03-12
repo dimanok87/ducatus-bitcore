@@ -3,6 +3,7 @@ import { WalletService } from '../server';
 import { BchChain } from './bch';
 import { BtcChain } from './btc';
 import { DucChain } from './duc';
+import { DucXChain } from './ducx';
 import { EthChain } from './eth';
 const Common = require('../common');
 const Constants = Common.Constants;
@@ -35,6 +36,7 @@ const chain: { [chain: string]: IChain } = {
   BCH: new BchChain(),
   DUC: new DucChain(),
   ETH: new EthChain(),
+  DUCX: new DucXChain(),
 };
 
 class ChainProxy {

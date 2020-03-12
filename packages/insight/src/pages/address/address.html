@@ -50,7 +50,7 @@
         </ion-grid>
 
         <h1>Transactions</h1>
-        <coin-list  *ngIf="chainNetwork.chain === 'ETH'" [addrStr]="address.addrStr" [chainNetwork]="chainNetwork"></coin-list>
+        <coin-list  *ngIf="chainNetwork.chain === 'ETH' || chainNetwork.chain === 'DUCX'" [addrStr]="address.addrStr" [chainNetwork]="chainNetwork"></coin-list>
         <transaction-list *ngIf="chainNetwork.chain === 'DUC' || chainNetwork.chain === 'BTC' || chainNetwork.chain === 'BCH'" [queryType]="'address'" [queryValue]="address.addrStr" [chainNetwork]="chainNetwork"> </transaction-list>
       </div>
 

@@ -149,7 +149,7 @@ export class Credentials {
       }
 
       var coin = '0';
-      if (this.network != 'livenet' && this.coin !== 'eth') {
+      if (this.network != 'livenet' && this.coin !== 'eth' && this.coin !== 'ducx') {
         coin = '1';
       } else if (this.coin == 'bch') {
         if (this.use145forBCH) {
@@ -163,6 +163,8 @@ export class Credentials {
         coin = '0';
       } else if (this.coin == 'eth') {
         coin = '60';
+      } else if (this.coin == 'ducx') {
+        coin = '1060';
       } else {
         throw new Error('unknown coin: ' + this.coin);
       }
